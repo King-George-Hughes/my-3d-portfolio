@@ -21,7 +21,12 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer">
+            George Hughes
+            <span className="hidden sm:block">| Fullstack</span>
+          </p>
         </Link>
+        <p className="text-yellow-400">asdsa</p>
       </div>
     </nav>
   );
