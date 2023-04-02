@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
-// import { SectionWrapper } from "../hoc";
+import SectionWrapper from "../hoc/SectionWrapper";
 import { fadeIn, textVariant } from "../utils/motion";
-import { staggerContainer } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -38,15 +37,8 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
-      <motion.section
-        // Animation
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-      >
+    <SectionWrapper>
+      <>
         {/* Move to About */}
         <span className="hash-span" id="about">
           &nbsp;
@@ -74,8 +66,8 @@ const About = () => {
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
-      </motion.section>
-    </>
+      </>
+    </SectionWrapper>
   );
 };
 
