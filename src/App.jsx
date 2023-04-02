@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import { Navbar } from "./components";
+import { Hero } from "./components";
+import { About } from "./components";
 import Experience from "./components/Experience";
 import Tech from "./components/Tech";
 import Works from "./components/Works";
